@@ -15,6 +15,8 @@ type Point interface {
 	Distance(p Point) float64
 	// Return the distance between the point and the plane X_{dim}=val
 	PlaneDistance(val float64, dim int) float64
+	// Return timestamp
+	GetValues() []float64
 	// Return label
 	GetLabel() string
 	// Return timestamp
@@ -32,6 +34,10 @@ func (b PointBase) Dim() int {
 
 func (b PointBase) GetValue(dim int) float64 {
 	return b.Vec[dim]
+}
+
+func (b PointBase) GetValues() []float64 {
+	return b.Vec
 }
 
 func (b PointBase) GetLabel() string {

@@ -19,6 +19,8 @@ type Point interface {
 	GetValues() []float64
 	// Return label
 	GetLabel() string
+	// Return label
+	GetGroupLabel() string
 	// Return timestamp
 	GetTimestamp() int64
 }
@@ -41,6 +43,10 @@ func (b PointBase) GetValues() []float64 {
 }
 
 func (b PointBase) GetLabel() string {
+	return ""
+}
+
+func (b PointBase) GetGroupLabel() string {
 	return ""
 }
 

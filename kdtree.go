@@ -23,6 +23,10 @@ type Point interface {
 	GetGroupLabel() string
 	// Return timestamp
 	GetTimestamp() int64
+	// Return Sequence ending one
+	GetSequenceEndingOne() int64
+	// Return Sequence ending two
+	GetSequenceEndingTwo() int64
 }
 
 type PointBase struct {
@@ -50,8 +54,12 @@ func (b PointBase) GetGroupLabel() string {
 	return ""
 }
 
-func (b PointBase) GetTimestamp() int64 {
-	return 0
+func (b PointBase) GetSequenceEndingOne() int64 {
+	return -1
+}
+
+func (b PointBase) GetSequenceEndingTwo() int64 {
+	return -1
 }
 
 func NewPointBase(vals []float64) PointBase {

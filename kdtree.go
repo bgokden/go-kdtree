@@ -23,10 +23,14 @@ type Point interface {
 	GetGroupLabel() string
 	// Return timestamp
 	GetTimestamp() int64
-	// Return Sequence ending one
-	GetSequenceEndingOne() int64
-	// Return Sequence ending two
-	GetSequenceEndingTwo() int64
+	// Return Sequence length one
+	GetSequenceLengthOne() int64
+	// Return Sequence length two
+	GetSequenceLengthTwo() int64
+	// Return Sequence dimension one
+	GetSequenceDimhOne() int64
+	// Return Sequence dimension two
+	GetSequenceDimTwo() int64
 }
 
 type PointBase struct {
@@ -54,11 +58,19 @@ func (b PointBase) GetGroupLabel() string {
 	return ""
 }
 
-func (b PointBase) GetSequenceEndingOne() int64 {
+func (b PointBase) GetSequenceLengthOne() int64 {
 	return -1
 }
 
-func (b PointBase) GetSequenceEndingTwo() int64 {
+func (b PointBase) GetSequenceLengthTwo() int64 {
+	return -1
+}
+
+func (b PointBase) GetSequenceDimOne() int64 {
+	return -1
+}
+
+func (b PointBase) GetSequenceDimTwo() int64 {
 	return -1
 }
 

@@ -28,7 +28,7 @@ type Point interface {
 	// Return Sequence length two
 	GetSequenceLengthTwo() int64
 	// Return Sequence dimension one
-	GetSequenceDimhOne() int64
+	GetSequenceDimOne() int64
 	// Return Sequence dimension two
 	GetSequenceDimTwo() int64
 }
